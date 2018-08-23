@@ -1,0 +1,11 @@
+{
+  "name": "super-timeago",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "SILENT",
+  "license": "MIT",
+  "keywords": [
+    "timeago"
+  ],
+  "description": "little reverse engineered from timeago.js"
+}
