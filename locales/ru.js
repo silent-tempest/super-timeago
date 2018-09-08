@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * @param {number} value
- * @param {number} index
- * @returns {string[2]}
+ * @param  {number} value
+ * @param  {number} index
+ * @return {Array<string>}
  */
 function locale ( value, index ) {
   switch ( index ) {
@@ -27,9 +27,9 @@ var formats = [
 ];
 
 /**
- * @param {number} kind
- * @param {number} value
- * @returns {string[2]}
+ * @param  {number} kind
+ * @param  {number} value
+ * @return {Array<string>}
  */
 function format ( kind, value ) {
   var format = formats[ kind ];

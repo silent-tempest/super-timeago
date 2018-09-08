@@ -1,11 +1,33 @@
 {
-  "name": "super-timeago",
+  "name": "timeago_es3",
+  "description": "little reverse engineered from timeago.js",
   "version": "1.0.0",
   "main": "index.js",
   "author": "SILENT",
-  "license": "MIT",
-  "keywords": [
-    "timeago"
-  ],
-  "description": "little reverse engineered from timeago.js"
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "prepublish": "npm run lint && npm run test && npm run docs",
+    "test": "mocha -r chai/register-should",
+    "docs": "jsdoc -d docs .",
+    "lint": "jshint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silent-tempest/timeago_es3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/silent-tempest/timeago_es3/issues"
+  },
+  "homepage": "https://github.com/silent-tempest/timeago_es3#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "jsdoc": "^3.5.5",
+    "jshint": "^2.9.6",
+    "mocha": "^5.2.0"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {}
 }

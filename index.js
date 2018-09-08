@@ -3,20 +3,25 @@
 var ARRAY = [ 60, 60, 24, 7, 365 / 12 / 7, 12 ];
 
 /**
- * @param {number|Date} date
- * @param {number|Date} [now]
- * @param {function} locale
- * @returns {string}
+ * @method format
+ * @param  {number|Date} date
+ * @param  {number|Date} [origin]
+ * @param  {function}    locale
+ * @return {string}
+ * @example
+ * var format = require( 'timeago_es3' );
+ * var ru     = require( 'timeago_es3/locales/ru' );
+ * var string = format( Date.now(), ru ); // -> 'только что'
  */
-function format ( date, now, locale ) {
+function format ( date, origin, locale ) {
   var i, j, diff;
 
-  if ( typeof now === 'function' ) {
-    locale = now;
-    now = new Date().getTime();
+  if ( typeof origin === 'function' ) {
+    locale = origin;
+    origin = new Date().getTime();
   }
 
-  diff = ( date - now ) / 1000;
+  diff = ( date - origin ) / 1000;
 
   if ( diff <= 0 ) {
     diff = - diff;
